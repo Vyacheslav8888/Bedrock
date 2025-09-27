@@ -1,0 +1,39 @@
+# C собранные файлы
+core/build/
+*.a
+*.o
+*.obj
+*.exe
+
+# Базы данных
+*.db
+*.sqlite
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Android
+android/.gradle/
+android/app/build/
+android/.idea/
+
+# Node.js/Web
+web/node_modules/
+web/dist/
+web/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Системные
+.DS_Store
+Thumbs.dbcore/build/
