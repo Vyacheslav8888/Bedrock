@@ -14,6 +14,11 @@ extern "C"
     int core_init(const char *db_path);
     void core_cleanup();
 
+    // Функции базы данных (ДОБАВИТЬ ЭТИ СТРОКИ)
+    int db_init(const char *db_path);
+    void db_close();
+    int db_exec(const char *sql);
+
     // Авторизация
     int auth_register(const char *username, const char *password);
     int auth_login(const char *username, const char *password);

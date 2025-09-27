@@ -1,6 +1,7 @@
 #include "../../include/database/sqlite_wrapper.h"
 #include "../../libs/sqlite3/sqlite3.h"
 #include <stdio.h>
+#include <string.h>
 
 static sqlite3 *db = NULL;
 
@@ -9,7 +10,7 @@ int db_init(const char *db_path)
     int result = sqlite3_open(db_path, &db);
     if (result != SQLITE_OK)
     {
-        printf("Database opening error: %s\n", sqlite3_errmsg(db));
+        printf("Database error: %s\n", sqlite3_errmsg(db));
         return 0;
     }
     return 1;
@@ -44,6 +45,6 @@ int db_exec(const char *sql)
 
 int db_exec_with_params(const char *sql, const char **params, int param_count)
 {
-    // Реализация позже
+    // Пока просто вызываем обычный exec
     return db_exec(sql);
 }
